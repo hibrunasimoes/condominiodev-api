@@ -12,8 +12,7 @@
     "condominiodev_api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7100;http://localhost:5017",
+      "applicationUrl": "http://localhost:22256",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
