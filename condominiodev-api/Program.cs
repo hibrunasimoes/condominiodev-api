@@ -1,4 +1,6 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using condominiodev_api.Database;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -9,6 +11,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+builder.Services.AddDbContext<CondominioDevDbContext>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
