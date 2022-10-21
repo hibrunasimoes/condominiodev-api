@@ -25,9 +25,11 @@
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Database\Mappings\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
