@@ -27,7 +27,6 @@
     <None Remove="Microsoft.EntityFrameworkCore.Relational" />
     <None Remove="Interfaces\" />
     <None Remove="Interfaces\Repository\" />
-    <None Remove="Interfaces\Service\" />
     <None Remove="Database\Repositories\" />
     <None Remove="Controllers\" />
   </ItemGroup>
@@ -36,7 +35,6 @@
     <Folder Include="Database\Mappings\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Repository\" />
-    <Folder Include="Interfaces\Service\" />
     <Folder Include="Database\Repositories\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
