@@ -29,6 +29,7 @@
     <None Remove="Interfaces\Repository\" />
     <None Remove="Database\Repositories\" />
     <None Remove="Controllers\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
@@ -37,5 +38,6 @@
     <Folder Include="Interfaces\Repository\" />
     <Folder Include="Database\Repositories\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>
