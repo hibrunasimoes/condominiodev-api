@@ -1,6 +1,8 @@
 ﻿using System;
+using condominiodev_api.DTOs;
 using condominiodev_api.Interfaces.Repository;
 using condominiodev_api.Interfaces.Service;
+using condominiodev_api.Model;
 
 namespace condominiodev_api.Services
 {
@@ -18,9 +20,9 @@ namespace condominiodev_api.Services
             throw new NotImplementedException();
         }
 
-        public void Insert()
+        public void Insert(HabitanteDTO habitante)
         {
-            throw new NotImplementedException();
+            _habitanteRepositoy.Insert(new Habitante(habitante));
         }
 
         public void Update()
