@@ -1,9 +1,9 @@
 ﻿using System;
-using condominiodev_api.DTOs;
+using condominiodev_api.Model;
 
-namespace condominiodev_api.Model
+namespace condominiodev_api.DTOs
 {
-    public class Habitante
+    public class HabitanteDTO
     {
         public int Id { get; set; }
 
@@ -17,7 +17,12 @@ namespace condominiodev_api.Model
 
         public string CPF { get; set; }
 
-        public Habitante (HabitanteDTO habitante)
+        public HabitanteDTO()
+        {
+
+        }
+
+        public HabitanteDTO (Habitante habitante)
         {
             Id = habitante.Id;
             Nome = habitante.Nome;
@@ -26,10 +31,6 @@ namespace condominiodev_api.Model
             Renda = habitante.Renda;
             CPF = habitante.CPF;
         }
-
-        public Habitante ()
-        {
-
-        }
     }
 }
+

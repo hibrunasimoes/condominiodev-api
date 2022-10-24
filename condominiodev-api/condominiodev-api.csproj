@@ -27,19 +27,19 @@
     <None Remove="Microsoft.EntityFrameworkCore.Relational" />
     <None Remove="Interfaces\" />
     <None Remove="Interfaces\Repository\" />
-    <None Remove="Interfaces\Service\" />
     <None Remove="Database\Repositories\" />
     <None Remove="Controllers\" />
     <None Remove="Services\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
     <Folder Include="Database\Mappings\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Repository\" />
-    <Folder Include="Interfaces\Service\" />
     <Folder Include="Database\Repositories\" />
     <Folder Include="Controllers\" />
     <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
 </Project>
