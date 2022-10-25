@@ -31,6 +31,7 @@ namespace condominiodev_api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
         [HttpGet("{id}")]
         public IActionResult GetById([FromRoute] int id)
         {
@@ -58,6 +59,22 @@ namespace condominiodev_api.Controllers
             }
             return Ok();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update (int id, [FromBody] HabitanteDTO habitante)
+        {
+            try
+            {
+                habitante.Id = id;
+                _habitanteService.Update(habitante);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status201Created);
+            }
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete ([FromRoute] int id)
         {
@@ -70,7 +87,6 @@ namespace condominiodev_api.Controllers
             {
                 return StatusCode(StatusCodes.Status201Created);
             }
-            return Ok();
         }
     }
 }

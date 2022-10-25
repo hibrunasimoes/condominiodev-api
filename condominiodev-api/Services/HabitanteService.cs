@@ -38,9 +38,12 @@ namespace condominiodev_api.Services
             return _habitanteRepositoy.ListAll().Select(x => new HabitanteGetDTO(x)).ToList();
         }
 
-        public void Update()
+        public void Update(HabitanteDTO habitante)
         {
-            throw new NotImplementedException();
+            var habitanteDb = _habitanteRepositoy.GetById(habitante.Id);
+            habitanteDb.Update(habitante);
+
+            _habitanteRepositoy.Update(habitanteDb);
         }
     }
 }
