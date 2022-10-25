@@ -46,6 +46,20 @@ namespace condominiodev_api.Controllers
             return Ok();
         }
 
+        [HttpGet("{month}")]
+        public IActionResult GetByMonth([FromRoute] int month)
+        {
+            try
+            {
+                _habitanteService.GetByMonth(month);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            return Ok();
+        }
+
         [HttpPost("insert")]
         public IActionResult Insert ([FromBody] HabitanteDTO habitante)
         {
