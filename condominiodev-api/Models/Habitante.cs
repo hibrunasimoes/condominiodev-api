@@ -31,5 +31,11 @@ namespace condominiodev_api.Model
         {
 
         }
+
+        public Habitante (HabitanteGetDTO habitante)
+        {
+            Id = habitante.Id;
+            Nome = habitante.Nome;
+        }
     }
 }

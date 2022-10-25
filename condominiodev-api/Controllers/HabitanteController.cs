@@ -1,6 +1,7 @@
 ﻿using System;
 using condominiodev_api.DTOs;
 using condominiodev_api.Interfaces.Service;
+using condominiodev_api.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace condominiodev_api.Controllers
@@ -16,8 +17,36 @@ namespace condominiodev_api.Controllers
             _habitanteService = habitanteService;
         }
 
-        [HttpPost("Insert")]
-        public IActionResult Insert([FromBody] HabitanteDTO habitante)
+        [HttpGet]
+        public IActionResult ListAll(
+            [FromQuery] string nome,
+            [FromQuery] int id)
+        {
+            try
+            {
+                return Ok(_habitanteService.ListAll(nome, id));
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+        [HttpGet("{id}")]
+        public IActionResult GetById([FromRoute] int id)
+        {
+            try
+            {
+                _habitanteService.GetById(id);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+            return Ok();
+        }
+
+        [HttpPost("insert")]
+        public IActionResult Insert ([FromBody] HabitanteDTO habitante)
         {
             try
             {
@@ -25,7 +54,7 @@ namespace condominiodev_api.Controllers
             }
             catch
             {
-                return StatusCode(500);
+                return StatusCode(StatusCodes.Status201Created);
             }
             return Ok();
         }
