@@ -10,6 +10,11 @@ namespace condominiodev_api.Database.Repositories
         public HabitanteRepository(CondominioDevDbContext context) : base(context)
         {
         }
+
+        public Habitante GetByMonth(int month)
+         {
+            return _context.Habitantes.FirstOrDefault(h => h.DataNascimento.Month == month);
+        }
     }
 }
 

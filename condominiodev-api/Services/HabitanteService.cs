@@ -28,6 +28,11 @@ namespace condominiodev_api.Services
             return new HabitanteGetDTO(_habitanteRepositoy.GetById(id));
         }
 
+        public HabitanteDTO GetByMonth(int month)
+        {
+            return new HabitanteDTO(_habitanteRepositoy.GetByMonth(month));
+        }
+        
         public void Insert(HabitanteDTO habitante)
         {
             _habitanteRepositoy.Insert(new Habitante(habitante));
