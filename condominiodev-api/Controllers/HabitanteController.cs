@@ -58,6 +58,20 @@ namespace condominiodev_api.Controllers
             }
             return Ok();
         }
+        [HttpDelete("{id}")]
+        public IActionResult Delete ([FromRoute] int id)
+        {
+            try
+            {
+                _habitanteService.Delete(id);
+                return StatusCode(StatusCodes.Status204NoContent);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status201Created);
+            }
+            return Ok();
+        }
     }
 }
 

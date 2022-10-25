@@ -16,9 +16,11 @@ namespace condominiodev_api.Services
             _habitanteRepositoy = habitanteRepository;
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var habitante = _habitanteRepositoy.GetById(id);
+            _habitanteRepositoy.Delete(habitante);
+
         }
 
         public HabitanteGetDTO GetById(int id)
