@@ -37,5 +37,14 @@ namespace condominiodev_api.Model
             Id = habitante.Id;
             Nome = habitante.Nome;
         }
+
+        public void Update (HabitanteDTO habitante)
+        {
+            Nome = habitante.Nome;
+            Sobrenome = habitante.Sobrenome;
+            DataNascimento = habitante.DataNascimento;
+            Renda = habitante.Renda;
+            CPF = habitante.CPF;
+        }
     }
 }
