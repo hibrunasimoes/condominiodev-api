@@ -9,7 +9,7 @@ namespace condominiodev_api.Interfaces.Service
         void Update(HabitanteDTO habitante);
         void Delete(int id);
         IList<HabitanteGetDTO> ListAll(string nome, int id);
-        HabitanteGetDTO GetById(int id);
+        HabitanteDTO GetById(int id);
         //int GetTotal();
         HabitanteDTO GetByMonth(int month);
     }
