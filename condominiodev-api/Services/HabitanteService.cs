@@ -33,7 +33,12 @@ namespace condominiodev_api.Services
         {
             return new HabitanteDTO(_habitanteRepository.GetByMonth(month));
         }
-        
+
+        public HabitanteDTO GetByName(string nome)
+        {
+            return new HabitanteDTO(_habitanteRepository.GetByName(nome));
+        }
+
         public void Insert(HabitanteDTO habitante)
         {
             _habitanteRepository.Insert(new Habitante(habitante));

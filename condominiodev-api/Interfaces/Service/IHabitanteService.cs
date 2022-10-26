@@ -12,6 +12,8 @@ namespace condominiodev_api.Interfaces.Service
         HabitanteDTO GetById(int id);
         //int GetTotal();
         HabitanteDTO GetByMonth(int month);
+        HabitanteDTO GetByName(string nome);
+
     }
 }
 
