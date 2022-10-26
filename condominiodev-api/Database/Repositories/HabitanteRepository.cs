@@ -15,6 +15,11 @@ namespace condominiodev_api.Database.Repositories
          {
             return _context.Habitantes.FirstOrDefault(h => h.DataNascimento.Month == month);
         }
+
+        public Habitante GetByName(string nome)
+        {
+            return _context.Habitantes.FirstOrDefault(h => h.Nome == nome);
+        }
     }
 }
 

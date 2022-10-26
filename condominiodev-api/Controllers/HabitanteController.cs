@@ -57,6 +57,18 @@ namespace condominiodev_api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+        [HttpGet("busca/nome/{name}")]
+        public IActionResult GetByName([FromRoute] string name)
+        {
+            try
+            {
+                return Ok(_habitanteService.GetByName(name));
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
 
         [HttpPost]
         public IActionResult Insert (HabitanteDTO habitante)
