@@ -9,46 +9,47 @@ namespace condominiodev_api.Services
 {
     public class HabitanteService : IHabitanteService
     {
-        private readonly IHabitanteRepository _habitanteRepositoy;
+        private readonly IHabitanteRepository _habitanteRepository;
 
         public HabitanteService (IHabitanteRepository habitanteRepository)
         {
-            _habitanteRepositoy = habitanteRepository;
+            _habitanteRepository = habitanteRepository;
         }
 
         public void Delete(int id)
         {
-            var habitante = _habitanteRepositoy.GetById(id);
-            _habitanteRepositoy.Delete(habitante);
+            var habitante = _habitanteRepository.GetById(id);
+            _habitanteRepository.Delete(habitante);
 
         }
 
-        public HabitanteGetDTO GetById(int id)
+        public HabitanteDTO GetById(int id)
         {
-            return new HabitanteGetDTO(_habitanteRepositoy.GetById(id));
+            //return new HabitanteDTO(_habitanteRepository.GetById(id));
+            return new HabitanteDTO(_habitanteRepository.GetById(id));
         }
 
         public HabitanteDTO GetByMonth(int month)
         {
-            return new HabitanteDTO(_habitanteRepositoy.GetByMonth(month));
+            return new HabitanteDTO(_habitanteRepository.GetByMonth(month));
         }
         
         public void Insert(HabitanteDTO habitante)
         {
-            _habitanteRepositoy.Insert(new Habitante(habitante));
+            _habitanteRepository.Insert(new Habitante(habitante));
         }
 
         public IList<HabitanteGetDTO> ListAll(string nome, int id)
         {
-            return _habitanteRepositoy.ListAll().Select(x => new HabitanteGetDTO(x)).ToList();
+            return _habitanteRepository.ListAll().Select(x => new HabitanteGetDTO(x)).ToList();
         }
 
         public void Update(HabitanteDTO habitante)
         {
-            var habitanteDb = _habitanteRepositoy.GetById(habitante.Id);
+            var habitanteDb = _habitanteRepository.GetById(habitante.Id);
             habitanteDb.Update(habitante);
 
-            _habitanteRepositoy.Update(habitanteDb);
+            _habitanteRepository.Update(habitanteDb);
         }
     }
 }

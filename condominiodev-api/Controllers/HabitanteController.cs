@@ -37,31 +37,29 @@ namespace condominiodev_api.Controllers
         {
             try
             {
-                _habitanteService.GetById(id);
+               return Ok (_habitanteService.GetById(id));
             }
             catch
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
-            return Ok();
         }
 
-        [HttpGet("{month}")]
+        [HttpGet("busca/{month}")]
         public IActionResult GetByMonth([FromRoute] int month)
         {
             try
             {
-                _habitanteService.GetByMonth(month);
+               return Ok (_habitanteService.GetByMonth(month));
             }
             catch
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
-            return Ok();
         }
 
-        [HttpPost("insert")]
-        public IActionResult Insert ([FromBody] HabitanteDTO habitante)
+        [HttpPost]
+        public IActionResult Insert (HabitanteDTO habitante)
         {
             try
             {
@@ -99,7 +97,7 @@ namespace condominiodev_api.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status201Created);
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
     }
