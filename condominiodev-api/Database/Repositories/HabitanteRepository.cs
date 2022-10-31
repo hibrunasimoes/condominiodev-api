@@ -20,6 +20,11 @@ namespace condominiodev_api.Database.Repositories
         {
             return _context.Habitantes.FirstOrDefault(h => h.Nome == nome);
         }
+
+        public Habitante GetMaiorCusto()
+        {
+            return _context.Habitantes.Where(where => where.Renda > 0).OrderByDescending(r => r.Renda).FirstOrDefault();
+        }
     }
 }
 

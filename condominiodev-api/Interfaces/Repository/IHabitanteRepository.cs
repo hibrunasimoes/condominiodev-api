@@ -8,6 +8,7 @@ namespace condominiodev_api.Interfaces.Repository
     {
         Habitante GetByMonth(int month);
         Habitante GetByName(string nome);
+        Habitante GetMaiorCusto();
     }
 }
 
