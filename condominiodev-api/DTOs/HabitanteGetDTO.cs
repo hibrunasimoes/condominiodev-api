@@ -9,6 +9,8 @@ namespace condominiodev_api.DTOs
 
         public string Nome { get; set; }
 
+        public int Renda { get; set; }
+
 
         public HabitanteGetDTO()
         {
@@ -19,6 +21,7 @@ namespace condominiodev_api.DTOs
         {
             Id = habitante.Id;
             Nome = habitante.Nome;
+            Renda = habitante.Renda;
         }
 
     }

@@ -13,7 +13,7 @@ namespace condominiodev_api.Interfaces.Service
         //int GetTotal();
         HabitanteDTO GetByMonth(int month);
         HabitanteDTO GetByName(string nome);
-
+        HabitanteGetDTO GetMaiorCusto();
     }
 }
 
