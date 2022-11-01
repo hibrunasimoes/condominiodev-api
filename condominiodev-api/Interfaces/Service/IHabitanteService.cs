@@ -1,5 +1,6 @@
 ﻿using System;
 using condominiodev_api.DTOs;
+using condominiodev_api.Model;
 
 namespace condominiodev_api.Interfaces.Service
 {
@@ -14,6 +15,8 @@ namespace condominiodev_api.Interfaces.Service
         HabitanteDTO GetByMonth(int mes);
         HabitanteDTO GetByName(string nome);
         HabitanteGetDTO GetMaiorCusto();
+        public int GetTotalSpend();
+
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.ConstrainedExecution;
+using condominiodev_api.DTOs;
 using condominiodev_api.Interfaces.Repository;
 using condominiodev_api.Model;
 
@@ -25,6 +26,11 @@ namespace condominiodev_api.Database.Repositories
         {
             return _context.Habitantes.Where(where => where.Renda > 0).OrderByDescending(r => r.Renda).FirstOrDefault();
 
+        }
+
+        public IList<int> GetTotalSpend()
+        {
+            return _context.Habitantes.Select(select => select.Renda).ToList();
         }
     }
 }

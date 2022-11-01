@@ -27,6 +27,19 @@ namespace condominiodev_api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("gasto-total")]
+        public ActionResult GetTotalSpend()
+        {
+            try
+            {
+                return Ok(_habitanteService.GetTotalSpend());
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
     }
 }
 

@@ -61,6 +61,17 @@ namespace condominiodev_api.Services
 
             _habitanteRepository.Update(habitanteDb);
         }
+
+        public int GetTotalSpend()
+        {
+            int sum = 0;
+            var spend = _habitanteRepository.GetTotalSpend();
+            foreach (var renda in spend)
+            {
+                sum += renda;
+            }
+            return sum;
+        }
     }
 }
 
