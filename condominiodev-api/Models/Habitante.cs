@@ -46,5 +46,6 @@ namespace condominiodev_api.Model
             Renda = habitante.Renda;
             CPF = habitante.CPF;
         }
+
     }
 }

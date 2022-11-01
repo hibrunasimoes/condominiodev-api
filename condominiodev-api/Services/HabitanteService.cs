@@ -29,9 +29,9 @@ namespace condominiodev_api.Services
             return new HabitanteDTO(_habitanteRepository.GetById(id));
         }
 
-        public HabitanteDTO GetByMonth(int month)
+        public HabitanteDTO GetByMonth(int mes)
         {
-            return new HabitanteDTO(_habitanteRepository.GetByMonth(month));
+            return new HabitanteDTO(_habitanteRepository.GetByMonth(mes));
         }
 
         public HabitanteDTO GetByName(string nome)

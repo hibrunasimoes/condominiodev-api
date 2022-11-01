@@ -6,7 +6,7 @@ namespace condominiodev_api.Interfaces.Repository
 {
     public interface IHabitanteRepository : IBaseRepository<Habitante, int>
     {
-        Habitante GetByMonth(int month);
+        Habitante GetByMonth(int mes);
         Habitante GetByName(string nome);
         Habitante GetMaiorCusto();
     }
