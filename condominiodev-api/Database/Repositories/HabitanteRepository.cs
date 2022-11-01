@@ -32,6 +32,11 @@ namespace condominiodev_api.Database.Repositories
         {
             return _context.Habitantes.Select(select => select.Renda).ToList();
         }
+
+        public int TotalBudget()
+        {
+            return 800;
+        }
     }
 }
 

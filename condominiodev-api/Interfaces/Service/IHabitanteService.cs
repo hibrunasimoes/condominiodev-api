@@ -16,6 +16,7 @@ namespace condominiodev_api.Interfaces.Service
         HabitanteDTO GetByName(string nome);
         HabitanteGetDTO GetMaiorCusto();
         public int GetTotalSpend();
+        public int TotalBudget();
 
     }
 }
