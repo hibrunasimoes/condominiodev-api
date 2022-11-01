@@ -10,6 +10,7 @@ namespace condominiodev_api.Interfaces.Repository
         Habitante GetByName(string nome);
         Habitante GetMaiorCusto();
         IList<int> GetTotalSpend();
+        int TotalBudget();
     }
 }
 

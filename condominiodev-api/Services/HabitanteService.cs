@@ -72,6 +72,11 @@ namespace condominiodev_api.Services
             }
             return sum;
         }
+
+        public int TotalBudget()
+        {
+            return _habitanteRepository.TotalBudget();
+        }
     }
 }
 
