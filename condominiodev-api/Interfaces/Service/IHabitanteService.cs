@@ -11,7 +11,7 @@ namespace condominiodev_api.Interfaces.Service
         IList<HabitanteGetDTO> ListAll(string nome, int id);
         HabitanteDTO GetById(int id);
         //int GetTotal();
-        HabitanteDTO GetByMonth(int month);
+        HabitanteDTO GetByMonth(int mes);
         HabitanteDTO GetByName(string nome);
         HabitanteGetDTO GetMaiorCusto();
     }

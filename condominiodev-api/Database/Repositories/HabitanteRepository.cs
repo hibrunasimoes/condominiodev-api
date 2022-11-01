@@ -11,9 +11,9 @@ namespace condominiodev_api.Database.Repositories
         {
         }
 
-        public Habitante GetByMonth(int month)
+        public Habitante GetByMonth(int mes)
          {
-            return _context.Habitantes.FirstOrDefault(h => h.DataNascimento.Month == month);
+            return _context.Habitantes.FirstOrDefault(h => h.DataNascimento.Month == mes);
         }
 
         public Habitante GetByName(string nome)
@@ -24,6 +24,7 @@ namespace condominiodev_api.Database.Repositories
         public Habitante GetMaiorCusto()
         {
             return _context.Habitantes.Where(where => where.Renda > 0).OrderByDescending(r => r.Renda).FirstOrDefault();
+
         }
     }
 }

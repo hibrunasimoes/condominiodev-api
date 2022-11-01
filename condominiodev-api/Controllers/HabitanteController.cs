@@ -46,11 +46,11 @@ namespace condominiodev_api.Controllers
         }
 
         [HttpGet("busca/{month}")]
-        public IActionResult GetByMonth([FromRoute] int month)
+        public IActionResult GetByMonth([FromRoute] int mes)
         {
             try
             {
-               return Ok (_habitanteService.GetByMonth(month));
+               return Ok (_habitanteService.GetByMonth(mes));
             }
             catch
             {
