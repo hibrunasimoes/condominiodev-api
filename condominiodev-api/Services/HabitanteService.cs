@@ -77,6 +77,23 @@ namespace condominiodev_api.Services
         {
             return _habitanteRepository.TotalBudget();
         }
+
+        public string BetweenBudgetAndExpense()
+        {
+            int rendaTotal = 0;
+
+            var listaRenda = _habitanteRepository.GetTotalSpend();
+            var gastoPorHabitantes = listaRenda.Count;
+            foreach (var renda in listaRenda)
+            {
+                rendaTotal += renda;
+            }
+            var valorTotalCondominio = _habitanteRepository.TotalBudget() * gastoPorHabitantes;
+            var gastofinal = rendaTotal - valorTotalCondominio;
+
+            return $"A renda total do condomínio é referente ao custo de todos os habitantes, que corresponde ao valor de R$ {rendaTotal}. E valor de renda final é de R$ {gastofinal} devido ao desconto do valor do Condomino de R$ 800 por apartamento";
+
+        }
     }
 }
 
