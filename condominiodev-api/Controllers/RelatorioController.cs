@@ -53,6 +53,12 @@ namespace condominiodev_api.Controllers
                 return StatusCode(StatusCodes.Status200OK);
             }
         }
+        [HttpGet("diferenca-orcamentos")]
+        public IActionResult BetweenBudgetAndExpense ()
+        {
+            return Ok(_habitanteService.BetweenBudgetAndExpense());
+        }
+        
     }
 }
 
