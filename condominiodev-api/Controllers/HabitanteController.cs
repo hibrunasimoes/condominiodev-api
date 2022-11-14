@@ -32,7 +32,7 @@ namespace condominiodev_api.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/busca")]
         public IActionResult GetById([FromRoute] int id)
         {
             try
@@ -45,7 +45,7 @@ namespace condominiodev_api.Controllers
             }
         }
 
-        [HttpGet("busca/{month}")]
+        [HttpGet("{month}/busca")]
         public IActionResult GetByMonth([FromRoute] int mes)
         {
             try
@@ -57,7 +57,7 @@ namespace condominiodev_api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
-        [HttpGet("busca/nome/{name}")]
+        [HttpGet("{name}/busca/nome")]
         public IActionResult GetByName([FromRoute] string name)
         {
             try
@@ -70,7 +70,7 @@ namespace condominiodev_api.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpPost("cadastrar")]
         public IActionResult Insert (HabitanteDTO habitante)
         {
             try
@@ -84,7 +84,7 @@ namespace condominiodev_api.Controllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}/atualizar")]
         public IActionResult Update (int id, [FromBody] HabitanteDTO habitante)
         {
             try
@@ -99,7 +99,7 @@ namespace condominiodev_api.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}/deletar")]
         public IActionResult Delete ([FromRoute] int id)
         {
             try
