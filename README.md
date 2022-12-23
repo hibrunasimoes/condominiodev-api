@@ -3,9 +3,6 @@
   Projeto desenvolvido para o curso DEVinHouse
 </h1> 
 
-<h4 align="center"> 
-	🚧  Projeto em desenvolvimento 🚧
-</h4>
 
 ## 💻 Sobre o projeto
 
